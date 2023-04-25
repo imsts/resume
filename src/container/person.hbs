@@ -1,12 +1,114 @@
 <div>
+  {{#with person}}
   <main>
     <section>
-      <p>in progress..</p>
+      <div>
+        <h2>{{name}}</h2>
+        <p>Age: {{age}}</p>
+        <p>Gender: {{gender}}</p>
+        <p>Address: {{address.street}}, {{address.city}}, {{address.state}}, {{address.zip}}, {{address.country}}</p>
+      </div>
+      <br>
+      <hr>
+    </section>
+
+    <section>
+      <div>
+        <h3>Education:</h3>
+        <ul>
+          {{#each education}}
+          <li>
+            <h4>{{degree}} in {{major}}</h4>
+            <p>{{university}}, {{graduationYear}}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <br>
+      <hr>
+    </section>
+
+    <section>
+      <h3>Work Experience</h3>
+      <ul>
+        {{#each workExperience}}
+        <li>
+          <h4>{{title}} at {{company}}</h4>
+          <p>{{startDate}} - {{endDate}}</p>
+          <p>Responsibilities:</p>
+          <ul>
+            {{#each responsibilities}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <p>Year founded: {{year_founded}}</p>
+          <p>Industry: {{industry}}</p>
+
+          <section>
+            <div>
+              {{#each employees}}
+              <h3>{{name}}</h3>
+              <p>Position: <b>{{position}}</b></p>
+              <p>Department: <i>{{department}}</i></p>
+              <h3>Projects:</h3>
+              <ul>
+                {{#each projects}}
+                <li>
+                  <h3>{{name}}</h3>
+                  <p>{{description}}</p>
+                  <p>Status: {{status}}</p>
+                  <h3>Team:</h3>
+                  <ul>
+                    {{#each teams}}
+                    <li>
+                      <h3>{{team_name}}</h3>
+                      <p>Team Leader: {{team_leader.name}} ({{team_leader.title}})</p>
+                      <h7>Team Members:</h7>
+                      <ul>
+                        {{#each team_members}}
+                        <li>
+                          <h3>{{name}} ({{title}})</h3>
+                          <p>Email: {{email}}</p>
+                          <p>Skills: {{skills}}</p>
+                          <h3>Projects:</h3>
+                          <ul>
+                            {{#each projects}}
+                            <li>
+                              <h3>{{name}}</h3>
+                              <p>{{description}}</p>
+                              <h3>Technologies:</h3>
+                              <ul>
+                                {{#each technologies}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                              </ul>
+                              <h3>Team Members:</h3>
+                              <ul>
+                                {{#each team_members}}
+                                <li>
+                                  <h13>{{name}} ({{title}})</h13>
+                                </li>
+                                {{/each}}
+                              </ul>
+                            </li>
+                            {{/each}}
+                          </ul>
+                        </li>
+                        {{/each}}
+                      </ul>
+                    </li>
+                    {{/each}}
+                  </ul>
+                </li>
+                {{/each}}
+              </ul>
+              {{/each}}
+            </div>
+          </section>
+        </li>
+        {{/each}}
+      </ul>
     </section>
   </main>
+  {{/with}}
 </div>
-
-{{!--
-Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-Адже наш layout/default.hbs має вже структуру HTML
---}}
