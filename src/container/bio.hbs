@@ -1,0 +1,61 @@
+<div>
+  {{#with main}}
+  <main>
+
+    <div>
+      <h1>{{name}}</h1>
+      <p>Born on {{birthdate}} in {{birthplace}}</p>
+      <p>Died on {{deathdate}} in {{deathplace}}</p>
+      <p>Nationality: {{nationality}}</p>
+      <p>Occupation: {{occupation}}</p>
+      <p>Known for: {{#each known_for}}{{this}}{{#unless @last}},
+        {{/unless}}{{/each}}</p>
+    </div>
+    <hr>
+    <section>
+      <ul>
+        {{#each education}}
+        <li>{{degree}} in {{field}} from {{institution}} ({{year}})</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each notable_publications}}
+        <li>"{{title}}" ({{year}}), {{publisher}}</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each partners}}
+        <li>{{name}} - {{relationship}} ({{years}})</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each awards}}
+        <li>{{title}} ({{year}}) - {{description}}</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each influences}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each influenced}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each quotes}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each major_discoveries}}
+        <li>{{title}} ({{year}}) - {{description}}</li>
+        {{/each}}
+      </ul>
+      <br>
+      <p>{{contributions.description}} ({{contributions.year}}) - {{contributions.field}}</p>
+    </section>
+  </main>
+  {{/with}}
+</div>
