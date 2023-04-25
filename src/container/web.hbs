@@ -1,0 +1,52 @@
+<h1>Web Development</h1>
+
+{{#each web.languages}}
+<h2>{{name}} ({{version}})</h2>
+<p>{{description}}</p>
+<hr>
+
+{{#if elements}}
+<h3>HTML Elements</h3>
+{{#each elements}}
+<p><strong>{{name}}</strong>: {{description}}</p>
+{{#if attributes}}
+<ul>
+  {{#each attributes}}
+  <li><strong>{{name}}</strong>: {{description}}</li>
+  {{/each}}
+</ul>
+{{/if}}
+{{/each}}
+<hr>
+{{/if}}
+
+{{#if properties}}
+<h3>CSS Properties</h3>
+{{#each properties}}
+<p><strong>{{name}}</strong>: {{description}}</p>
+{{#if values}}
+<ul>
+  {{#each values}}
+  <li><strong>{{value}}</strong>: {{description}}</li>
+  {{/each}}
+</ul>
+{{/if}}
+{{/each}}
+<hr>
+{{/if}}
+
+{{#if functions}}
+<h3>JavaScript Functions</h3>
+{{#each functions}}
+<p><strong>{{name}}</strong>: {{description}}</p>
+{{#if parameters}}
+<ul>
+  {{#each parameters}}
+  <li><strong>{{name}}</strong> ({{type}}): {{description}}</li>
+  {{/each}}
+</ul>
+{{/if}}
+{{/each}}
+<hr>
+{{/if}}
+{{/each}}
