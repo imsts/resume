@@ -1,0 +1,46 @@
+<h1>{{program.excursion.name}}</h1>
+<p>Location: {{program.excursion.location.city}}, {{program.excursion.location.country}}</p>
+<p>Date: {{program.excursion.date}}</p>
+<hr>
+<h2>{{program.excursion.program.[0].name}}</h2>
+<p>Type: {{program.excursion.program.[0].type}}</p>
+<p>Duration: {{program.excursion.program.[0].duration}} hours</p>
+<p>Details:</p>
+<ul>
+  <li>Museum: {{program.excursion.program.[0].details.museum.name}}</li>
+  <li>Address: {{program.excursion.program.[0].details.museum.location.address}},
+    {{program.excursion.program.[0].details.museum.location.city}},
+    {{program.excursion.program.[0].details.museum.location.country}}</li>
+  <li>Exhibits:</li>
+  <ul>
+    {{#each program.excursion.program.[0].details.museum.exhibits}}
+    <li>{{this.name}} by {{this.artist}} - {{this.description}}
+      {{#if this.audio_guide}}(Audio guide available){{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  <li>Guide: {{program.excursion.program.[0].details.guide.name}},
+    {{program.excursion.program.[0].details.guide.language}}
+    ({{program.excursion.program.[0].details.guide.rating}}
+    stars)</li>
+</ul>
+<hr>
+<h2>{{program.excursion.program.[1].name}}</h2>
+<p>Type: {{program.excursion.program.[1].type}}</p>
+<p>Duration: {{program.excursion.program.[1].duration}} hours</p>
+<p>Details:</p>
+<ul>
+  <li>Venue: {{program.excursion.program.[1].details.venue.name}}</li>
+  <li>Address: {{program.excursion.program.[1].details.venue.location.address}},
+    {{program.excursion.program.[1].details.venue.location.city}},
+    {{program.excursion.program.[1].details.venue.location.country}}</li>
+  <li>Performers:</li>
+  <ul>
+    {{#each program.excursion.program.[1].details.performers}}
+    <li>{{this.name}} - {{this.type}}</li>
+    {{/each}}
+  </ul>
+  <li>Guide: {{program.excursion.program.[1].details.guide.name}},
+    {{program.excursion.program.[1].details.guide.language}} ({{program.excursion.program.[1].details.guide.rating}}
+    stars)</li>
+</ul>
