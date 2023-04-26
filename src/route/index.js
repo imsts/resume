@@ -280,6 +280,10 @@ router.get('/person', function (req, res) {
   res.render('person', {
     layout: 'basic',
 
+    page: {
+      title: 'Resume | Person',
+    },
+
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -382,6 +386,10 @@ router.get('/bio', function (req, res) {
   res.render('bio', {
     layout: 'basic',
 
+    page: {
+      title: 'Resume | Bio',
+    },
+
     main: {
       name: 'Albert Einstein',
       birthdate: 'March 14, 1879',
@@ -482,6 +490,10 @@ router.get('/program', function (req, res) {
   res.render('program', {
     layout: 'basic',
 
+    page: {
+      title: 'Resume | Program',
+    },
+
     program: {
       excursion: {
         name: 'Cultural Tour',
@@ -568,6 +580,10 @@ router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'basic',
+
+    page: {
+      title: 'Resume | WEB',
+    },
 
     web: {
       languages: [
