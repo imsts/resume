@@ -1,0 +1,157 @@
+<div>
+  <main>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 230px;">
+      <h1>{{main.name}}</h1>
+    </span>
+    <hr>
+    <section>
+      <h5>
+        <em>{{main.description}}</em>
+      </h5>
+    </section>
+    <hr>
+    <section>
+      <h5>
+        <em>Year: {{main.history.year}}</em>
+      </h5>
+      <h5>
+        <em>Founder: {{main.history.founder}}</em>
+      </h5>
+    </section>
+    <hr>
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Types</h2>
+    </span>
+
+    <section>
+      <ul class="list-group">
+        {{#each main.types}}
+        <li class="list-group-item">
+          <h3><code>{{this}}</code></h3>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Syntax</h2>
+    </span>
+    <br>
+    <section>
+      <ul class="list-group">
+
+        <span class="badge text-bg-light">
+          <h3>Variables:</h3>
+        </span>
+
+        {{#each main.syntax.variables}}
+        <li class="list-group-item">
+          <h3><code>{{this}}</code></h3>
+        </li>
+        {{/each}}
+        <br>
+
+        <span class="badge text-bg-light">
+          <h3>Functions:</h3>
+        </span>
+
+        {{#each main.syntax.functions}}
+        <li class="list-group-item">
+          <h4><code>{{this}}</code></h4>
+        </li>
+        {{/each}}
+        <br>
+
+        <span class="badge text-bg-light">
+          <h3>Conditionals:</h3>
+        </span>
+
+        {{#each main.syntax.conditionals}}
+        <li class="list-group-item">
+          <h4><code>{{this}}</code></h4>
+        </li>
+        {{/each}}
+        <br>
+
+        <span class="badge text-bg-light">
+          <h3>Loops:</h3>
+        </span>
+
+        {{#each main.syntax.loops}}
+        <li class="list-group-item">
+          <h4><code>{{this}}</code></h4>
+        </li>
+        {{/each}}
+        <br>
+
+        <span class="badge text-bg-light">
+          <h3>Classes:</h3>
+        </span>
+
+        {{#each main.syntax.classes}}
+        <li class="list-group-item">
+          <h4><code>{{this}}</code></h4>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Features</h2>
+    </span>
+
+    <section>
+      <ul class="list-group">
+        {{#each main.features}}
+        <li class="list-group-item">
+          <h3><code>{{this}}</code></h3>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Libraries</h2>
+    </span>
+
+    <section>
+      <ul class="list-group">
+        {{#each main.libraries}}
+        <li class="list-group-item">
+          <h3><code>{{this}}</code></h3>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Tools</h2>
+    </span>
+
+    <section>
+      <ul class="list-group">
+        {{#each main.tools}}
+        <li class="list-group-item">
+          <h3><code>{{this}}</code></h3>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <span class="badge text-bg-warning" style="margin-left: 16px; width: 200px;">
+      <h2>Community</h2>
+    </span>
+
+    <section>
+      <ul class="list-group">
+        {{#each main.community}}
+        <li class="list-group-item">
+          <h3><code>{{this.name}} ({{this.type}})</code></h3>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+  </main>
+</div>
