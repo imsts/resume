@@ -1,0 +1,72 @@
+<section>
+  {{#each users}}
+<hr>
+      <figure class='text-center'>
+        <blockquote class='blockquote'>
+          <h2>{{name}}</h2
+        </blockquote>
+
+        <figcaption class='blockquote-footer'>
+          <p>{{gender}}, {{age}} years old</p>
+        </figcaption>
+      </figure>
+<hr>
+<figure>
+  <blockquote class="blockquote">
+    <h5>Friends & mutual_friends:</h5>
+  </blockquote>
+
+  <figcaption class="blockquote-footer">
+    <ul>
+        {{#each friends}}
+          <li><b>{{name}}</b> ({{gender}}, {{age}} years old)</li>
+          {{#if mutual_friends}}
+            <ul>
+              {{#each mutual_friends}}
+                <li>{{name}}
+                  ({{gender}},
+                  {{age}}
+                  years old)</li>
+                {{#if mutual_friends}}
+                  <ul>
+                    {{#each mutual_friends}}
+                      <li>{{name}}
+                        ({{gender}},
+                        {{age}}
+                        years old)</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/each}}
+      </ul>
+  </figcaption>
+</figure>
+
+<figure>
+  <blockquote class="blockquote">
+    <h5>Groups & members:</h5>
+  </blockquote>
+
+  <figcaption class="blockquote-footer">
+    <ul>
+        {{#each groups}}
+          <li>{{name}} - {{description}}</li>
+          {{#if members}}
+            <ul>
+              {{#each members}}
+                <li><b>{{name}}</b>
+                  ({{gender}},
+                  {{age}}
+                  years old)</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/each}}
+      </ul>
+  </figcaption>
+</figure>
+  {{/each}}
+</section>
