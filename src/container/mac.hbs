@@ -1,0 +1,65 @@
+<main>
+  <div class="row">
+    <div class="col-md-8">
+
+      <span class="badge text-bg-secondary" style="margin-left: 0px; width: 350px;">
+        <h4>{{main.category}}</h4>
+      </span>
+
+      <br>
+      <section>
+        <h4>Features:</h4>
+        <ul>
+          <li><b>Processor:</b> {{main.features.processor.brand}} {{main.features.processor.model}}
+            ({{main.features.processor.speed}}, {{main.features.processor.cores}} cores,
+            {{main.features.processor.cache}}
+            cache)</li>
+          <li><b>Memory:</b> {{main.features.memory.size}} {{main.features.memory.type}}
+            ({{main.features.memory.speed}})</li>
+          <li><b>Storage:</b> {{main.features.storage.size}} {{main.features.storage.type}}</li>
+          <li><b>Display:</b> {{main.features.display.size}} {{main.features.display.technology}}
+            ({{main.features.display.resolution}}, {{main.features.display.color_space}} color space,
+            {{main.features.display.brightness}} brightness, {{main.features.display.refresh_rate}} refresh rate)</li>
+          <li><b>Graphics:</b> {{main.features.graphics.brand}} {{main.features.graphics.model}}
+            ({{main.features.graphics.memory}})</li>
+
+          <li><b>Ports:</b>
+            <ul>
+              {{#each main.features.ports}}
+              <li>{{this.type}} - ({{this.count}})
+                {{#if this.features}} - ({{this.features}})
+                {{/if}}</li>
+              {{/each}}
+            </ul>
+          </li>
+          <li><b>Battery:</b> {{main.features.battery.type}} ({{main.features.battery.capacity}},
+            {{main.features.battery.life}})
+          </li>
+          <li><b>Weight:</b> {{main.features.weight}}</li>
+          <li><b>Dimensions:</b> {{main.features.dimensions.height}} x {{main.features.dimensions.width}} x
+            {{main.features.dimensions.depth}}</li>
+          <li><b>Operating System:</b> {{main.features.operating_system}}</li>
+          <li><b>Accessories:</b>
+            <ul>
+              {{#each main.features.accessories}}
+              <li>{{this.name}} ({{this.price}} $)</li>
+              {{/each}}
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="col-md-4">
+      <section>
+
+        <ul class="list-group" style="margin-left: 0px; width: 350px;">
+          <li class="list-group-item">
+            <h3>{{main.name}}</h3>
+          </li>
+          <li class="list-group-item"><b>{{main.description}}</b></li>
+          <li class="list-group-item active"><b>{{main.price}} $</b></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
