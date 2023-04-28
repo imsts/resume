@@ -12,14 +12,14 @@ var header = {
   },
   position: 'Junior Fullstack JS Developer',
   salary: '600$ в місяць',
-  address: 'Novovolynsk, Peremogy Ave 1',
+  address: 'City, Peremogy Ave 1',
 }
 
 var footer = {
   social: {
     email: {
-      text: 'imsts@gmail.com',
-      href: 'mailto:imsts89@gmail.com',
+      text: 'gmails@gmail.com',
+      href: 'mailto:gmail9@gmail.com',
     },
     phone: {
       text: '+380670000321',
@@ -1206,6 +1206,25 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrap', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+
+    page: {
+      title: 'Resume | bootstrap',
+    },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
