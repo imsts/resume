@@ -1,29 +1,41 @@
-<div class="container">
+<div class='container'>
   <main>
-    <div class="row">
-      <div class="col-md-8">
+    <div class='row'>
+      <div class='col-md-8'>
 
-        <span class="badge text-bg-secondary" style="margin-left: 16px; width: 350px;">
-          <h2>{{main.make}} {{main.model}} {{main.year}}</h2>
+        <span
+          class='badge text-bg-secondary'
+          style='margin-left: 16px; width: 350px;'
+        >
+          <h2>{{main.make}}
+            {{main.model}}
+            {{main.year}}</h2>
         </span>
 
         <section>
           <ul>
             <li>Color: {{main.color}}</li>
             <li>Base Price: {{main.price.base}}</li>
-            <li>Destination Charge: {{main.price.destination}}</li>
+            <li>Destination Charge:
+              {{main.price.destination}}</li>
             <li>Options:</li>
             <ul>
 
-              <li>Navigation: {{main.price.options.navigation}}</li>
-              <li>Moonroof: {{main.price.options.moonroof}}</li>
-              <li>Premium Paint: {{main.price.options.premium_paint}}</li>
+              <li>Navigation:
+                {{main.price.options.navigation}}</li>
+              <li>Moonroof:
+                {{main.price.options.moonroof}}</li>
+              <li>Premium Paint:
+                {{main.price.options.premium_paint}}</li>
             </ul>
             <li>Total Price: {{main.price.total}}</li>
           </ul>
         </section>
 
-        <span class="badge text-bg-secondary" style="margin-left: 16px; width: 350px;">
+        <span
+          class='badge text-bg-secondary'
+          style='margin-left: 16px; width: 350px;'
+        >
           <h4>Interior</h4>
         </span>
 
@@ -31,39 +43,70 @@
           <ul>
             <li>Seats:</li>
             <ul>
-              <li>Seats Material: {{main.features.interior.seats.material}}</li>
-              <li>Seats Color: {{main.features.interior.seats.color}}</li>
-              <li>Heated Seats: {{#if main.features.interior.seats.heated}}Yes{{else}}No{{/if}}</li>
-              <li>Ventilated Seats: {{#if main.features.interior.seats.ventilated}}Yes{{else}}No{{/if}}</li>
+              <li>Seats Material:
+                {{main.features.interior.seats.material}}</li>
+              <li>Seats Color:
+                {{main.features.interior.seats.color}}</li>
+              <li>Heated Seats:
+                {{#if
+                  main.features.interior.seats.heated
+                }}Yes{{else}}No{{/if}}</li>
+              <li>Ventilated Seats:
+                {{#if
+                  main.features.interior.seats.ventilated
+                }}Yes{{else}}No{{/if}}</li>
             </ul>
 
             <li>Dashboard:</li>
 
             <ul>
-              <li>Dashboard Material: {{main.features.interior.dashboard.material}}</li>
-              <li>Dashboard Color: {{main.features.interior.dashboard.color}}</li>
+              <li>Dashboard Material:
+                {{main.features.interior.dashboard.material}}</li>
+              <li>Dashboard Color:
+                {{main.features.interior.dashboard.color}}</li>
               <li>Display:</li>
               <ul>
-                <li>Display Type: {{main.features.interior.dashboard.display.type}}</li>
-                <li>Display Size: {{main.features.interior.dashboard.display.size}} inches</li>
-                <li>Display Resolution: {{main.features.interior.dashboard.display.resolution}}</li>
-                <li>Touchscreen: {{#if main.features.interior.dashboard.display.touchscreen}}Yes{{else}}No{{/if}}</li>
+                <li>Display Type:
+                  {{main.features.interior.dashboard.display.type}}</li>
+                <li>Display Size:
+                  {{main.features.interior.dashboard.display.size}}
+                  inches</li>
+                <li>Display Resolution:
+                  {{main.features.interior.dashboard.display.resolution}}</li>
+                <li>Touchscreen:
+                  {{#if
+                    main.features.interior.dashboard.display.touchscreen
+                  }}Yes{{else}}No{{/if}}</li>
               </ul>
             </ul>
 
             <li>Audio:</li>
 
             <ul>
-              <li>Audio System: {{main.features.interior.audio.system}}</li>
-              <li>Number of Speakers: {{main.features.interior.audio.speakers}}</li>
-              <li>Subwoofer: {{#if main.features.interior.audio.subwoofer}}Yes{{else}}No{{/if}}</li>
-              <li>Bluetooth: {{#if main.features.interior.audio.bluetooth}}Yes{{else}}No{{/if}}</li>
-              <li>USB: {{#if main.features.interior.audio.USB}}Yes{{else}}No{{/if}}</li>
+              <li>Audio System:
+                {{main.features.interior.audio.system}}</li>
+              <li>Number of Speakers:
+                {{main.features.interior.audio.speakers}}</li>
+              <li>Subwoofer:
+                {{#if
+                  main.features.interior.audio.subwoofer
+                }}Yes{{else}}No{{/if}}</li>
+              <li>Bluetooth:
+                {{#if
+                  main.features.interior.audio.bluetooth
+                }}Yes{{else}}No{{/if}}</li>
+              <li>USB:
+                {{#if
+                  main.features.interior.audio.USB
+                }}Yes{{else}}No{{/if}}</li>
             </ul>
           </ul>
         </section>
 
-        <span class="badge text-bg-secondary" style="margin-left: 16px; width: 350px;">
+        <span
+          class='badge text-bg-secondary'
+          style='margin-left: 16px; width: 350px;'
+        >
           <h4>Exterior</h4>
         </span>
 
@@ -71,85 +114,130 @@
           <ul>
             <li>Wheels: </li>
             <ul>
-              <li>Size: {{main.features.exterior.wheels.size}}</li>
-              <li>Type: {{main.features.exterior.wheels.type}}</li>
-              <li>Color: {{main.features.exterior.wheels.color}}</li>
+              <li>Size:
+                {{main.features.exterior.wheels.size}}</li>
+              <li>Type:
+                {{main.features.exterior.wheels.type}}</li>
+              <li>Color:
+                {{main.features.exterior.wheels.color}}</li>
             </ul>
 
             <li>Headlights: </li>
             <ul>
-              <li>Type: {{main.features.exterior.headlights.type}}</li>
-              <li>Brightness: {{main.features.exterior.headlights.brightness}}</li>
-              <li>Automatic: {{main.features.exterior.headlights.automatic}}</li>
+              <li>Type:
+                {{main.features.exterior.headlights.type}}</li>
+              <li>Brightness:
+                {{main.features.exterior.headlights.brightness}}</li>
+              <li>Automatic:
+                {{main.features.exterior.headlights.automatic}}</li>
             </ul>
 
             <li>Sunroof: </li>
             <ul>
-              <li>Type: {{main.features.exterior.sunroof.type}}</li>
-              <li>Size: {{main.features.exterior.sunroof.size}}</li>
-              <li>Automatic: {{main.features.exterior.sunroof.automatic}}</li>
+              <li>Type:
+                {{main.features.exterior.sunroof.type}}</li>
+              <li>Size:
+                {{main.features.exterior.sunroof.size}}</li>
+              <li>Automatic:
+                {{main.features.exterior.sunroof.automatic}}</li>
             </ul>
           </ul>
 
           <ul>
             <li>Safety: </li>
             <ul>
-              <li>Front: {{main.features.safety.airbags.front}}</li>
-              <li>Side: {{main.features.safety.airbags.side}}</li>
-              <li>Knee: {{main.features.safety.airbags.knee}}</li>
-              <li>Rear: {{main.features.safety.airbags.rear}}</li>
+              <li>Front:
+                {{main.features.safety.airbags.front}}</li>
+              <li>Side:
+                {{main.features.safety.airbags.side}}</li>
+              <li>Knee:
+                {{main.features.safety.airbags.knee}}</li>
+              <li>Rear:
+                {{main.features.safety.airbags.rear}}</li>
             </ul>
 
             <li>Assistance:</li>
             <ul>
-              <li>Blind Spot Monitoring: {{main.features.safety.assistance.blind_spot_monitoring}}</li>
-              <li>Rear Cross Traffic Alert: {{main.features.safety.assistance.rear_cross_traffic_alert}}</li>
-              <li>Lane Departure Warning: {{main.features.safety.assistance.lane_departure_warning}}</li>
-              <li>Adaptive Cruise Control: {{main.features.safety.assistance.adaptive_cruise_control}}</li>
-              <li>Collision Warning: {{main.features.safety.assistance.collision_warning}}</li>
+              <li>Blind Spot Monitoring:
+                {{main.features.safety.assistance.blind_spot_monitoring}}</li>
+              <li>Rear Cross Traffic Alert:
+                {{main.features.safety.assistance.rear_cross_traffic_alert}}</li>
+              <li>Lane Departure Warning:
+                {{main.features.safety.assistance.lane_departure_warning}}</li>
+              <li>Adaptive Cruise Control:
+                {{main.features.safety.assistance.adaptive_cruise_control}}</li>
+              <li>Collision Warning:
+                {{main.features.safety.assistance.collision_warning}}</li>
             </ul>
           </ul>
         </section>
 
-        <span class="badge text-bg-secondary" style="margin-left: 16px; width: 350px;">
+        <span
+          class='badge text-bg-secondary'
+          style='margin-left: 16px; width: 350px;'
+        >
           <h4>Engine</h4>
         </span>
 
         <section>
           <ul>
             <li>Type: {{main.engine.type}}</li>
-            <li>Displacement: {{main.engine.displacement}}L</li>
-            <li>Horsepower: {{main.engine.horsepower}} hp</li>
+            <li>Displacement:
+              {{main.engine.displacement}}L</li>
+            <li>Horsepower:
+              {{main.engine.horsepower}}
+              hp</li>
             <li>Torque: {{main.engine.torque}} lb-ft</li>
-            <li>Transmission: {{main.engine.transmission.type}}, Gears: {{main.engine.transmission.gears}}</li>
+            <li>Transmission:
+              {{main.engine.transmission.type}}, Gears:
+              {{main.engine.transmission.gears}}</li>
           </ul>
         </section>
 
-        <span class="badge text-bg-secondary" style="margin-left: 16px; width: 350px;">
+        <span
+          class='badge text-bg-secondary'
+          style='margin-left: 16px; width: 350px;'
+        >
           <h4>Fuel Economy</h4>
         </span>
 
         <section>
           <ul>
             <li>City: {{main.fuel_economy.city}} mpg</li>
-            <li>Highway: {{main.fuel_economy.highway}} mpg</li>
-            <li>Combined: {{main.fuel_economy.combined}} mpg</li>
+            <li>Highway:
+              {{main.fuel_economy.highway}}
+              mpg</li>
+            <li>Combined:
+              {{main.fuel_economy.combined}}
+              mpg</li>
           </ul>
         </section>
 
       </div>
-      <div class="col-md-4">
+      <div class='col-md-4'>
         <h3>Price</h3>
-        <ul class="list-group">
-          <li class="list-group-item">Base: {{main.price.base}} $</li>
-          <li class="list-group-item">Destination: {{main.price.destination}} $</li>
-          <li class="list-group-item"><b>Options:</b></li>
-          <ul class="list-group">
-            <li class="list-group-item">Navigation: {{main.price.options.navigation}} $</li>
-            <li class="list-group-item">Moonroof: {{main.price.options.moonroof}} $</li>
-            <li class="list-group-item">Premium paint: {{main.price.options.premium_paint}} $</li>
+        <ul class='list-group'>
+          <li class='list-group-item'>Base:
+            {{main.price.base}}
+            $</li>
+          <li class='list-group-item'>Destination:
+            {{main.price.destination}}
+            $</li>
+          <li class='list-group-item'><b>Options:</b></li>
+          <ul class='list-group'>
+            <li class='list-group-item'>Navigation:
+              {{main.price.options.navigation}}
+              $</li>
+            <li class='list-group-item'>Moonroof:
+              {{main.price.options.moonroof}}
+              $</li>
+            <li class='list-group-item'>Premium paint:
+              {{main.price.options.premium_paint}}
+              $</li>
           </ul>
-          <li class="list-group-item active">Total: {{main.price.total}} $</li>
+          <li class='list-group-item active'>Total:
+            {{main.price.total}}
+            $</li>
         </ul>
       </div>
     </div>
