@@ -1,0 +1,131 @@
+<main>
+<div>
+      {{!-- Виведення даних з об'єкта page_header --}}
+      <div>
+         {{#with page_header}}
+         <h1 class="text-center header-title">{{title}}</h1>
+         <p class="text-center text-uppercase">{{description}}</p>
+         {{/with}}
+      </div>
+
+      {{!-- Виведення даних з об'єкта section --}}
+      <div>
+         {{#with section}}
+
+         {{!-- Виведення даних з об'єкта about_us --}}
+         <div>
+            {{#with about_us}}
+            <div class="card">
+               <div class="card-body">
+                  {{#with title_list}}
+                  <div class="display-6 text-end about-sub">{{main}}</div>
+                  <br>
+                  <h2 class="text-end">{{sub}}</h2>
+                  {{/with}}
+                  <br>
+                  <button class="btn btn-outline-info">{{button.text}}</button>
+               </div>
+            </div>
+            {{/with}}
+         </div>
+         <br>
+
+         {{!-- Виведення даних з об'єкта advantage --}}
+         <div>
+            {{#with advantage}}
+            <div class="card">
+               <div class="card-body">
+                  <div class="display-5 advantage-title">{{title}}</div>
+                  <br>
+
+                  {{!-- Виведення даних з об'єкта efficiency --}}
+                  <div>
+                     <div class="card">
+                        <div class="card-body">
+                           {{#with efficiency}}
+                           <div class="display-4 advantage-title">{{title}}</div>
+                           <br>
+                           <h6>{{sub_title}}</h6>
+                           <br>
+                           <p>{{description}}</p>
+                           <br>
+                           <button class="btn btn-outline-warning">{{button}}</button>
+                           {{/with}}
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+
+                  {{!-- Виведення даних з об'єкта innovation --}}
+                  <div>
+                     <div class="card">
+                        <div class="card-body">
+                           {{#with innovation}}
+                           <div class="display-4 text-center advantage-title">{{title}}</div>
+                           <br>
+                           <h6 class="text-center">{{sub_title}}</h6>
+                           <br>
+                           <p class="text-center">{{description}}</p>
+                           <br>
+                           <button class="btn btn-outline-warning">{{button}}</button>
+                           {{/with}}
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+
+                  {{!-- Виведення даних з об'єкта collaboration --}}
+                  <div>
+                     <div class="card">
+                        <div class="card-body">
+                           {{#with collaboration}}
+                           <div class="display-4 text-end advantage-title">{{title}}</div>
+                           <br>
+                           <h6 class="text-end">{{sub_title}}</h6>
+                           <br>
+                           <p class="text-end">{{description}}</p>
+                           <br>
+                           <button class="btn btn-outline-warning">{{button}}</button>
+                           {{/with}}
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            {{/with}}
+         </div>
+         <br>
+         
+         {{!-- Виведення даних з об'єкта agreement --}}
+         <div>
+            {{#with agreement}}
+               <div class="card">
+                  <div class="card-body">
+                     <div class="display-5 agreement-title">{{title}}</div>
+                     <br>
+                     <div class="card">
+                        <div class="card-body">
+                           {{#with info}}
+                           <h5 class="agreement-title">{{sub_title}}</h5>
+                           <br>
+                           <div class="card">
+                              <div class="card-body">
+                                 {{#with detail}}
+                                 <p>{{text}}</p>
+                                 <br>
+                                 <button class="btn btn-success">{{button}}</button>
+                                 {{/with}}
+                              </div>
+                           </div>
+                           {{/with}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            {{/with}}
+         </div>
+         {{/with}}
+      </div>
+   </div>
+</main>
