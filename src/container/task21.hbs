@@ -1,0 +1,109 @@
+<main>
+{{!-- Виведення даних з об'єкта heading --}}
+{{#with heading}}
+         <div class="card">
+            <div class="card-body">
+               {{#with main}}
+                  <div class="card">
+                     <div class="card-body">
+                        <h1>{{title}}</h1>
+                        <p>{{text}}</p>
+                        {{#with button_text}}
+                        <button class="btn btn-primary btn-outline">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button class="btn btn-outline-primary btn-outline">{{outline}}</button>
+                        {{/with}}
+                     </div>
+                  </div>
+               {{/with}}
+               <br>
+
+               {{#with second}}
+                  <div class="card">
+                     <div class="card-body">
+                        <h2>{{title}}</h2>
+                        <p>{{text}}</p>
+                        {{#with button_text}}
+                        <button class="btn btn-secondary btn-outline">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button class="btn btn-outline-secondary btn-outline">{{outline}}</button>
+                        {{/with}}
+                     </div>
+                  </div>
+               {{/with}}
+               <br>
+
+               {{#with subblock}}
+                  <div class="card">
+                     <div class="card-body">
+                        <h3>{{title}}</h3>
+                        <p>{{text}}</p>
+                        {{#with button_text}}
+                        <button class="btn btn-dark btn-outline">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button class="btn btn-outline-dark btn-outline">{{outline}}</button>
+                        {{/with}}
+                     </div>
+                  </div>
+               
+               {{/with}}
+            </div>
+         </div>
+      {{/with}}
+      <br>
+      <br>
+
+{{!-- Виведення даних з об'єкта nested_display --}}
+{{#with nested_display}}
+      
+         <div class="card">
+            <div class="card-body">
+               <div class="display-1">{{title}}</div>
+               {{#with children_display}}
+               <div class="display__card">
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="display-4">{{title}}</div>
+                        <p>{{text}}</p>
+                        <button class="btn btn-outline-warning">{{button.text}}</button>
+                     </div>
+                  </div>
+               </div>
+               {{/with}}
+               <br>             
+               <h6>{{header_text}}</h6>
+               <button class="btn btn-info">{{button.text}}</button>
+            </div>
+         </div>
+      {{/with}}
+      <br>
+      <br>
+
+{{!-- Виведення даних з об'єкта paragraph --}}
+{{#with paragraph}}
+         <div class="card">
+            <div class="card-body">
+               <p class="display-6">{{title}}</p>
+               <p>{{text}}</p>
+               {{#with button}}
+               <a href="{{url}}" class="btn btn-link">{{text}}</a>
+               {{/with}}
+
+               <div class="card">
+                  <div class="card-body">
+                     <ul>
+                        {{#each list_name}}
+                        <li>
+                           <a href="{{url}}" class="btn btn-link">{{text}}</a>
+                        </li>
+                        {{/each}}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      {{/with}}
+</main>
