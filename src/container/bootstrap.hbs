@@ -1,7 +1,191 @@
 <main>
-   <div class="row gy-5">
+   <div class="row">
+
+      {{!-- Зовнішні відступи --}}
+      {{!-- m-* визначає зовнішні відступи для всіх сторін --}}
+      {{!-- mt-* визначає зовнішні відступи для верхньої сторони --}}
+      {{!-- mb-* визначає зовнішні відступи для нижньої сторони --}}
+      {{!-- my-* визначає вертикальні зовнішні відступи --}}
+      {{!-- ms-* визначає зовнішні відступи для лівої сторони --}}
+      {{!-- me-* визначає зовнішні відступи для правої сторони --}}
+      {{!-- mx-* визначає горизонтальні зовнішні відступи --}}
+      {{!-- замініть * на число від 1 до 5, щоб визначити --}}
+      {{!-- на скільки великими мають бути відступи --}}
+
+      <section class=" card col-5 mb-4">
+         <div class="card text-bg-primary m-3">
+            <div class="card-body">Карточка 1</div>
+         </div>
+         <div class="col-4 card text-bg-secondary mx-5">
+            <div class="card-body">Карточка 2</div>
+         </div>
+         <div class="col-4 card text-bg-warning my-4">
+            <div class="card-body">Карточка 3</div>
+         </div>
+         <div class="col-4 card text-bg-dark mb-3">
+            <div class="card-body">Карточка 4</div>
+         </div>
+      </section>
+
+      {{!-- Внутрішні відступи --}}
+      {{!-- p-* визначає внутрішні відступи для всіх сторін --}}
+      {{!-- pt-* визначає внутрішні відступи для верхньої сторони --}}
+      {{!-- pb-* визначає внутрішні відступи для нижньої сторони --}}
+      {{!-- py-* визначає вертикальні внутрішні відступи --}}
+      {{!-- ps-* визначає внутрішні відступи для лівої сторони --}}
+      {{!-- pe-* визначає внутрішні відступи для правої сторони --}}
+      {{!-- px-* визначає горизонтальні внутрішні відступи --}}
+      {{!-- замініть * на число від 1 до 5, щоб визначити --}}
+      {{!-- на скільки великими мають бути відступи --}}
+
+      <section class="card ms-3 mb-4 col-6">
+         <div class="col-5 card text-bg-primary p-4 m-3">
+            <div class="card-body">Карточка</div>
+         </div>
+         <div class="col-5 card text-bg-secondary pt-5 m-3">
+            <div class="card-body">Карточка</div>
+         </div>
+         <div class="col-5 card text-bg-warning py-4 m-3">
+            <div class="card-body">Карточка</div>
+         </div>
+         <div class="col-5 card text-bg-dark px-3 m-3">
+            <div class="card-body">Карточка</div>
+         </div>
+      </section>
+
+      {{!-- Alert - це компонент, який відображає повідомлення --}}
+      {{!-- alert визначає контейнер для компонента --}}
+      {{!-- alert-primary визначає основний колір --}}
+      {{!-- alert-secondary визначає додатковий колір --}}
+      {{!-- alert-success визначає зелений (успішний) колір --}}
+      {{!-- alert-danger визначає червоний (небезпечний) колір --}}
+      {{!-- alert-warning визначає жовтий (попереджувальний) колір --}}
+      {{!-- alert-info визначає блакитний (інформаційний) колір --}}
+      {{!-- alert-light визначає світлий колір --}}
+      {{!-- alert-dark визначає темний колір --}}
 
       <section class="col-6">
+         <div class="alert alert-primary">Це дуже важлива інформація!</div>
+         <div class="alert alert-light">Це дуже важлива інформація!</div>
+         <div class="alert alert-success">Це дуже важлива інформація!</div>
+      </section>
+
+      {{!-- Badge - це компонент, який вказує значок з контентом --}}
+      {{!-- badge клас для контейнера --}}
+      {{!-- rounded-pill робить заокруглення країв компонента --}}
+
+      <section class="col-8">
+         <div class="row">
+            <div class="col-12">
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                     <a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                     <a href="/skills">skills</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                     bootstrap
+                  </li>
+               </ol>
+            </div>
+
+            <div class="col-12">
+               <h6>Hellow World! <span class="badge text-bg-warning">NEW</span> </h6>
+               <h6>Hellow World! <span class="badge rounded-pill text-bg-warning text-uppercase">Топ продаж</span> </h6>
+               <button class="btn btn-primary rounded-pill">Click</button>
+            </div>
+
+         </div>
+      </section>
+
+
+      {{!-- Breadcrumb (“хлібні крихти”) - це навігаційний компонент,
+      який відображає ієрархію сторінок на сайті та дозволяє
+      користувачеві легко повернутись до попередніх сторінок. --}}
+
+      {{!-- breadcrumb клас для контейнера --}}
+      {{!-- breadcrumb-item клас для елемента --}}
+
+      <section class="col-8">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+               <a href="/skills">skills</a>
+            </li>
+            <li class="breadcrumb-item">
+               bootstrap
+            </li>
+         </ol>
+      </section>
+
+      {{!-- Nav - це компонент, який створює навігаційне меню --}}
+      {{!-- nav клас для контейнера --}}
+      {{!-- nav-item клас для елемента --}}
+      {{!-- nav-link клас для посилання всередині елемента --}}
+      {{!-- active клас для активного посилання --}}
+      {{!-- disabled клас для неактивного посилання --}}
+      <section class="col-12">
+         <div class="card">
+            <div class="nav">
+               <div class="nav-item">
+                  <a href="#" class="nav-link">Посилання</a>
+               </div>
+               <div class="nav-item">
+                  <a href="#" class="nav-link">Каталог</a>
+               </div>
+               <div class="nav-item">
+                  <a href="#" class="nav-link disabled">Підтримка</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {{!-- flex-column клас для контейнера, щоб вивести елементи вертикально --}}
+      <section class="col-4">
+         <div class="card">
+            <div class="card-body">
+               <div class="nav flex-column">
+                  <div class="nav-item">
+                     <div class="card">
+                        <a href="#" class="nav-link">Посилання</a>
+                     </div>
+                     <br>
+                  </div>
+                  <div class="nav-item">
+                     <div class="card">
+                        <a href="#" class="nav-link disabled">disabled</a>
+                     </div>
+                     <br>
+                  </div>
+                  <div class="nav-item">
+                     <div class="card">
+                        <a href="#" class="nav-link">Посилання</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {{!-- nav-tabs клас для контейнера, щоб вивести меню навігації в форматі вкладок --}}
+      <section class="col-12">
+         <div class="nav nav-tabs">
+            <div class="nav-item">
+               <a href="#" class="nav-link">Посилання</a>
+            </div>
+            <div class="nav-item">
+               <a href="#" class="nav-link disabled">disabled</a>
+            </div>
+            <div class="nav-item">
+               <a href="#" class="nav-link">Посилання</a>
+            </div>
+         </div>
+      </section>
+
+      <section class="col-12">
          {{!-- Card - це компонент, який створює карточку сутності --}}
          <div class="card">
             <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
