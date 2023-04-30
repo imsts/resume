@@ -1,0 +1,205 @@
+<main>
+   <div>
+      <div>
+         {{!-- Виведення даних з об'єкта 'navigation' --}}
+         <section class="mb-4">
+            {{#with navigation}}
+            <div class="card row">
+               <div class="card-body col-12">
+                  <ul class="nav">
+                     {{#each links}}
+                     <li class="nav-item">
+                        <a class="nav-link active" href="{{this.href}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disablet</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            {{/with}}
+         </section>
+
+         {{!-- Виведення даних з об'єкта 'newsBlock' --}}
+         <section class="mb-4">
+            {{#with newsBlock}}
+            <h2 class="text-center mb-4">{{title}}</h2>
+            <div class="row">
+               {{#each cards}}
+               <div class="col-3">
+                  <div class="card text-bg-dark mb-3">
+                     <div class="card-header">
+                        <span class="card-title">{{title}}</span>
+                        {{#if isTop}}
+                        <span class="badge text-bg-success rounded-pill
+                           text-uppercase">Топ</span>
+                        {{/if}}
+                        {{#if isNew}}
+                        <span class="badge text-bg-danger rounded-pill
+                           text-uppercase">Нова</span>
+                        {{/if}}
+                     </div>
+                     <div class="card-body">{{description}}</div>
+                  </div>
+               </div>
+               {{/each}}
+            </div>
+            {{/with}}
+         </section>
+         <hr>
+
+         {{!-- Виведення даних з об'єкта 'goodsBlock' --}}
+         <section class="mb-4">
+            {{#with goodsBlock}}
+            <div class="tabs row mb-5">
+               <div class="col">
+                  <ul class="nav nav-tabs pt-3">
+                     {{#each tabs}}
+                     <div class="nav-item">
+                        <a class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}"
+                           href="#">{{this.text}}</a>
+                     </div>
+                     {{/each}}
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+               {{#each cards}}
+               <div class="col-4 mb-4">
+                  <div class="card">
+                     <img src="{{image}}" class="card-img-top" alt="img">
+                     <div class="card-body">
+                        <div class="card-title">
+                           <span class="card-title">
+                              <h5>{{title}}</h5>
+                           </span>
+                           {{#if isHot}}
+                           <span class="badge text-bg-warning rounded-pill
+                              text-uppercase">Hot!</span>
+                           {{/if}}
+                           {{#if isNew}}
+                           <span class="badge text-bg-primary rounded-pill
+                              text-uppercase">Нове</span>
+                           {{/if}}
+                        </div>
+                        <br>
+                        <p>{{description}}</p>
+                     </div>
+                  </div>
+               </div>
+               {{/each}}
+            </div>
+            {{/with}}
+         </section>
+         <hr>
+
+         {{!-- Виведення даних з об'єкта 'subscribe' --}}
+         <section class="py-3">
+            {{#with subscribe}}
+            <div class="row">
+               <div class="col-12">
+                  <div class="card text-bg-dark">
+                     <div class="card-body">
+                        <h2 class="card-title mb-4">{{header}}</h2>
+                        <p>{{description}}</p>
+                        {{#each buttons}}
+                        <div class="flex-column">
+                           <a class="btn btn-primary flex-column mt-3" href="{{link}}">{{text}}</a>
+                        </div>
+                        {{/each}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {{/with}}
+         </section>
+         <hr>
+
+         {{!-- Виведення даних з об'єкта 'service' --}}
+         <section class="py-3">
+            {{#with service}}
+            <div class="row">
+               <div class="col-12">
+                  <div class="card text-bg-success text-center">
+                     <div class="card-body">
+                        <h2 class="card-title">{{title}}</h2>
+                        <p>{{description}}</p>
+                        {{#each buttons}}
+                        <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                        {{/each}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {{/with}}
+         </section>
+         <hr>
+
+         {{!-- Виведення даних з об'єкта 'footer' --}}
+         <footer class="mb-4">
+            <div class="row">
+               <section class="col-2">
+                  <ul class="nav">
+                     {{#each footer.[0]}}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{this.link}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                     </li>
+                  </ul>
+               </section>
+               <section class="col-2">
+                  <ul class="nav">
+                     {{#each footer.[1]}}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{this.link}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                     </li>
+                  </ul>
+               </section>
+               <section class="col-2">
+                  <ul class="nav">
+                     {{#each footer.[2]}}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{this.link}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                     </li>
+                  </ul>
+               </section>
+               <section class="col-2">
+                  <ul class="nav">
+                     {{#each footer.[3]}}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{this.link}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                     </li>
+                  </ul>
+               </section>
+               <section class="col-2">
+                  <ul class="nav">
+                     {{#each footer.[4]}}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{this.link}}">{{this.text}}</a>
+                     </li>
+                     {{/each}}
+                     <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                     </li>
+                  </ul>
+               </section>
+         </footer>
+      </div>
+   </div>
+</main>
