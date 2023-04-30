@@ -1,177 +1,226 @@
 <main>
-  <div>
-    <ul>
-      <p><b>Розміри основних заголовків: h1-h6</b></p>
-      <hr>
-      <p>Використовується 1 раз на сайті:</p>
-      <li>
-        <h1>Типографія (h1)</h1>
-      </li>
-      <hr>
-      <p>Використовуэться не більше 2 разів на сайті:</p>
-      <li>
-        <h2>Типографія (h2)</h2>
-      </li>
-      <hr>
-      <p>Можна використовувати багато разів:</p>
-      <li>
-        <h3>Типографія (h3)</h3>
-      </li>
-      <li>
-        <h4>Типографія (h4)</h4>
-      </li>
-      <li>
-        <h5>Типографія (h5)</h5>
-      </li>
-      <li>
-        <h6>Типографія (h6)</h6>
-      </li>
-      <hr>
-    </ul>
-  </div>
+   <div class="row gy-5">
 
-  <section>
-    <div>
-      <ul>
-        <li class='display-1'>Не семантичний текст
-          (class='display-1')</li>
-        <li class='display-5'>Не семантичний текст
-          (class='display-5')</li>
-        <li class='display-6'>Не семантичний текст
-          (class='display-6')</li>
-        <hr>
-      </ul>
+      <section class="col-6">
+         {{!-- Card - це компонент, який створює карточку сутності --}}
+         <div class="card">
+            <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
+            <div class="card-body">
+               <h5 class="card-title">Карточка товару</h5>
+               <p>Опис товару, технічні характеристики, тощо...</p>
+               <a href="/web" class="btn btn-primary">Кнопка</a>
+            </div>
+         </div>
+      </section>
 
-      <ul>
-        <li><span class='text-muted'>Додатковий текст
-            (class='text-muted')</span></li>
-        <li><span class='display-6 text-muted'>Додатковий
-            текст (class='display-6 text-muted')</span></li>
-      </ul>
+      <section class="col-4">
+         {{!-- List - це компонент, який створює список --}}
+         {{!-- Card Header та Card Footer --}}
+         <div class="card">
+            <div class="card-header text-bg-primary">
+               <div class="display-6">Menu</div>
+            </div>
+            <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="/" class="btn btn-link">Home</a></li>
+               <li class="list-group-item"><a href="/task21" class="btn btn-link">task21</a></li>
+               <li class="list-group-item"><a href="/task22" class="btn btn-link">task22</a></li>
+            </ul>
+            <div class="card-footer">
+               <button class="btn btn-outline-secondary btn-sm">Update list</button>
+            </div>
+         </div>
+      </section>
 
-      <ul >
-        <li class="text-center" <h4>Вирівнювання тексту по центру (class="text-center")</h4>
-        </li>
-        <li class="text-end" <h4>Вирівнювання тексту в кінці (class="text-end")</h4>
-        </li>
-      </ul>
-    </div>
-  </section>
+      <section class="col-8">
+         {{!-- Tables - це компонент, який створює таблиці --}}
+         <table class="table table-striped table-bordered text-bg-success">
+            <thead>
+               <tr>
+                  <th>
+                     #id
+                  </th>
+                  <th>
+                     name
+                  </th>
+                  <th>
+                     age
+                  </th>
+               </tr>
+            </thead>
 
-  <hr>
+            <tbody>
+               <tr>
+                  <th>
+                     1
+                  </th>
+                  <td>
+                     Jhon
+                  </td>
+                  <td>
+                     34
+                  </td>
+               </tr>
+               <tr>
+                  <th>
+                     3
+                  </th>
+                  <td>
+                     Ivan
+                  </td>
+                  <td>
+                     35
+                  </td>
+               </tr>
+               <tr>
+                  <th>
+                     4
+                  </th>
+                  <td>
+                     Ivan
+                  </td>
+                  <td>
+                     35
+                  </td>
+               </tr>
+               <tr>
+                  <th>
+                     5
+                  </th>
+                  <td>
+                     Ivan
+                  </td>
+                  <td>
+                     35
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
 
-  <div class="text-uppercase">
-    <ul>
-      <li>
-        <p>(h2 class="text-uppercase")</p>
-        <h2>Верхній регістр</h2>
-      </li>
-    </ul>
-  </div>
+      <section class="col-6">
+         {{!-- Background color - це додатковий class name, який дає можливість зафарбувати фон компонента. --}}
+         {{!-- text-bg-primary визначає основний колір --}}
+         {{!-- text-bg-secondary визначає додатковий колір --}}
+         {{!-- text-bg-success визначає зелений (успішний) колір --}}
+         {{!-- text-bg-danger визначає червоний (небезпечний) колір --}}
+         {{!-- text-bg-warning визначає жовтий (попереджувальний) колір --}}
+         {{!-- text-bg-info визначає блакитний (інформаційний) колір --}}
+         {{!-- text-bg-light визначає світлий колір --}}
+         {{!-- text-bg-dark визначає темний колір --}}
 
-  <div class="text-lowercase">
-    <ul>
-      <li>
-        <p>(h2 class="text-lowercase")</p>
-        <h2>Нижній регістр</h2>
-      </li>
-    </ul>
-  </div>
+         <div class="card text-bg-secondary">
+            <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
+            <div class="card-body">
+               <h5 class="card-title">Карточка товару</h5>
+               <p>Опис товару, технічні характеристики, тощо...</p>
+               <a href="/web" class="btn btn-primary">Кнопка</a>
+            </div>
+         </div>
+      </section>
 
-  <div class="text-capitalize">
-    <ul>
-      <li>
-        <p>(h2 class="text-capitalize")</p>
-        <h2>кожне слово з великої букви</h2>
-      </li>
-    </ul>
-  </div>
-  <hr>
+      <section class="col-12">
+         <div class="card text-bg-success">
+            <div class="card-header text-center">Header</div>
+            <div class="card-body">
+               <h6 class="card-title">Title</h6>
+               <p>Будь який контент в нашому боксі.. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                  dolor
+                  aliquid et sequi corrupti, laboriosam magnam optio unde, provident nostrum, accusamus beatae delectus
+                  eveniet totam aperiam nisi sint voluptatum doloremque!</p>
+               <button class="btn btn-light">Click</button>
+               <div class="card-footer text-center">Footer</div>
+            </div>
+         </div>
+      </section>
 
-  <div>
-    <p>Кнопки:</p>
-    <br>
-    <p>Основна кнопка на сайті:</p>
-    <button class="btn btn-primary"><span class="text-uppercase">Кнопка btn-primary</span></button>
-  </div>
-  <br>
-  <div>
-    <p>Другорядна кнопка на сайті:</p>
-    <button class="btn btn-secondary"><span class="text-uppercase">Кнопка btn-secondary</span></button>
-  </div>
-  <br>
-  <div>
-    <p>Кнопка підтвердження на сайті:</p>
-    <button class="btn btn-success"><span class="text-uppercase">Кнопка btn-success</span></button>
-  </div>
-  <br>
-  <div>
-    <p>Інші різновиди кнопок на сайті:</p>
-    <ul>
-      <li><button class="btn btn-light"><span class="text-uppercase">Кнопка btn-light</span></button></li>
-      <br>
-      <li><button class="btn btn-danger"><span class="text-uppercase">Кнопка btn-danger</span></button></li>
-      <br>
-      <li><button class="btn btn-warning"><span class="text-uppercase">Кнопка btn-warning</span></button></li>
-      <br>
-      <li><a href="#" class="btn btn-info">Кнопка з посиланням href="#" btn-info</a></li>
-      <br>
-      <li><button class="btn btn-info"><span class="text-uppercase">Кнопка btn-info</span></button></li>
-      <br>
-      <li><button class="btn btn-dark"><span class="text-uppercase">Кнопка btn-dark</span></button></li>
-      <br>
-      <li><button class="btn btn-link"><span class="text-uppercase">Кнопка btn-link</span></button></li>
-    </ul>
-  </div>
-  <hr>
-  <br>
-<div>
-  <p>Кольоровий текст:</p>
-  <p class="text-primary">Колір тексту (class="text-primary")</p>
-  <p class="text-secondary">Колір тексту (class="text-secondary")</p>
-  <p class="text-success">Колір тексту (class="text-success")</p>
-  <p class="text-warning">Колір тексту (class="text-warning")</p>
-  <p class="text-muted">Колір тексту (class="text-muted")</p>
-</div>
-<br>
-<hr>
+      <section class="col-12">
+         {{!-- Сітка - це підхід до верстки інтерфейсів, в якому ми розділяємо наш контент на 12 колонок --}}
+         {{!-- row визначає рядок стовпців у сітковій системі --}}
+         {{!-- сol-* визначає ширину стовпців у системі сітки --}}
+         {{!-- (замініть * на число від 1 до 12, щоб визначити скільки стовпців має охоплювати ваш елемент) --}}
+         {{!-- g-* визначає вертикальний та горизонтальний розрив
+         замініть * на число від 1 до 5, щоб визначити на скільки великими мають бути відступи --}}
 
-<div>
-  <p>Outline buttons:</p>
+         {{!-- gy-* визначає вертикальний розрив --}}
 
-  <button type="button" class="btn btn-outline-primary">Primary</button>
-  <button type="button" class="btn btn-outline-secondary">Secondary</button>
-  <button type="button" class="btn btn-outline-success">Success</button>
-  <button type="button" class="btn btn-outline-danger">Danger</button>
-  <button type="button" class="btn btn-outline-warning">Warning</button>
-  <button type="button" class="btn btn-outline-info">Info</button>
-  <button type="button" class="btn btn-outline-light">Light</button>
-  <button type="button" class="btn btn-outline-dark">Dark</button>
-</div>
-<br>
-<hr>
+         {{!-- gx-* визначає горизонтальний розрив --}}
 
-<div>
-  <p>Sizes buttons (розміри кнопок):</p>
+         <div class="row gy-3 gx-2">
 
-  <button type="button" class="btn btn-outline-secondary btn-lg">Велика кнопка (btn-lg)</button>
-  <button type="button" class="btn btn-outline-secondary btn-sm">Маленька кнопка (btn-sm)</button>
+            <div class="col-4">
+               <div class="card text-bg-primary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
 
-</div>
-<br>
-<hr>
+            <div class="col-4">
+               <div class="card text-bg-secondary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
 
-<div>
-  <p>Block або Box (коробка для контенту):</p>
+            <div class="col-4">
+               <div class="card text-bg-secondary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
 
-  <div class="card">
-  <div class="card-body">
-    This is some text within a card body.
-  </div>
-</div>
+            <div class="col-4">
+               <div class="card text-bg-secondary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
 
-</div>
-<br>
-<hr>
+            <div class="col-4">
+               <div class="card text-bg-secondary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-4">
+               <div class="card text-bg-secondary">
+                  <div class="card-header text-center">Header</div>
+                  <div class="card-body">
+                     <h6 class="card-title">Title</h6>
+                     <p>Будь який контент в нашому боксі..</p>
+                     <button class="btn btn-light">Click</button>
+                     <div class="card-footer text-center">Footer</div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+   </div>
 </main>
-
