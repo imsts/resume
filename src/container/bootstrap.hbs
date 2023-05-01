@@ -1,410 +1,555 @@
-<main>
+<main class="p-5">
    <div class="row">
 
-      {{!-- Зовнішні відступи --}}
-      {{!-- m-* визначає зовнішні відступи для всіх сторін --}}
-      {{!-- mt-* визначає зовнішні відступи для верхньої сторони --}}
-      {{!-- mb-* визначає зовнішні відступи для нижньої сторони --}}
-      {{!-- my-* визначає вертикальні зовнішні відступи --}}
-      {{!-- ms-* визначає зовнішні відступи для лівої сторони --}}
-      {{!-- me-* визначає зовнішні відступи для правої сторони --}}
-      {{!-- mx-* визначає горизонтальні зовнішні відступи --}}
-      {{!-- замініть * на число від 1 до 5, щоб визначити --}}
-      {{!-- на скільки великими мають бути відступи --}}
+      {{!-- Switch field - це компонент, який створює поле-перемикач, який надає можливість включати та вимикати поле --}}
+      {{!-- form-switch - клас для контейнера поля перемікача, який вказується разом з класом form-check
+      перемикач працює з <input type="checkbox"> --}}
 
-      <section class=" card col-5 mb-4">
-         <div class="card text-bg-primary m-3">
-            <div class="card-body">Карточка 1</div>
-         </div>
-         <div class="col-4 card text-bg-secondary mx-5">
-            <div class="card-body">Карточка 2</div>
-         </div>
-         <div class="col-4 card text-bg-warning my-4">
-            <div class="card-body">Карточка 3</div>
-         </div>
-         <div class="col-4 card text-bg-dark mb-3">
-            <div class="card-body">Карточка 4</div>
-         </div>
-      </section>
+      
+            <div class="card col-3 p-4 m-3">
+               <h5 class="form-label">Switch field</h5>
 
-      {{!-- Внутрішні відступи --}}
-      {{!-- p-* визначає внутрішні відступи для всіх сторін --}}
-      {{!-- pt-* визначає внутрішні відступи для верхньої сторони --}}
-      {{!-- pb-* визначає внутрішні відступи для нижньої сторони --}}
-      {{!-- py-* визначає вертикальні внутрішні відступи --}}
-      {{!-- ps-* визначає внутрішні відступи для лівої сторони --}}
-      {{!-- pe-* визначає внутрішні відступи для правої сторони --}}
-      {{!-- px-* визначає горизонтальні внутрішні відступи --}}
-      {{!-- замініть * на число від 1 до 5, щоб визначити --}}
-      {{!-- на скільки великими мають бути відступи --}}
-
-      <section class="card ms-3 mb-4 col-6">
-         <div class="col-5 card text-bg-primary p-4 m-3">
-            <div class="card-body">Карточка</div>
-         </div>
-         <div class="col-5 card text-bg-secondary pt-5 m-3">
-            <div class="card-body">Карточка</div>
-         </div>
-         <div class="col-5 card text-bg-warning py-4 m-3">
-            <div class="card-body">Карточка</div>
-         </div>
-         <div class="col-5 card text-bg-dark px-3 m-3">
-            <div class="card-body">Карточка</div>
-         </div>
-      </section>
-
-      {{!-- Alert - це компонент, який відображає повідомлення --}}
-      {{!-- alert визначає контейнер для компонента --}}
-      {{!-- alert-primary визначає основний колір --}}
-      {{!-- alert-secondary визначає додатковий колір --}}
-      {{!-- alert-success визначає зелений (успішний) колір --}}
-      {{!-- alert-danger визначає червоний (небезпечний) колір --}}
-      {{!-- alert-warning визначає жовтий (попереджувальний) колір --}}
-      {{!-- alert-info визначає блакитний (інформаційний) колір --}}
-      {{!-- alert-light визначає світлий колір --}}
-      {{!-- alert-dark визначає темний колір --}}
-
-      <section class="col-6">
-         <div class="alert alert-primary">Це дуже важлива інформація!</div>
-         <div class="alert alert-light">Це дуже важлива інформація!</div>
-         <div class="alert alert-success">Це дуже важлива інформація!</div>
-      </section>
-
-      {{!-- Badge - це компонент, який вказує значок з контентом --}}
-      {{!-- badge клас для контейнера --}}
-      {{!-- rounded-pill робить заокруглення країв компонента --}}
-
-      <section class="col-8">
-         <div class="row">
-            <div class="col-12">
-               <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                     <a href="/">Home</a>
-                  </li>
-                  <li class="breadcrumb-item">
-                     <a href="/skills">skills</a>
-                  </li>
-                  <li class="breadcrumb-item">
-                     bootstrap
-                  </li>
-               </ol>
-            </div>
-
-            <div class="col-12">
-               <h6>Hellow World! <span class="badge text-bg-warning">NEW</span> </h6>
-               <h6>Hellow World! <span class="badge rounded-pill text-bg-warning text-uppercase">Топ продаж</span> </h6>
-               <button class="btn btn-primary rounded-pill">Click</button>
-            </div>
-
-         </div>
-      </section>
-
-
-      {{!-- Breadcrumb (“хлібні крихти”) - це навігаційний компонент,
-      який відображає ієрархію сторінок на сайті та дозволяє
-      користувачеві легко повернутись до попередніх сторінок. --}}
-
-      {{!-- breadcrumb клас для контейнера --}}
-      {{!-- breadcrumb-item клас для елемента --}}
-
-      <section class="col-8">
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-               <a href="/">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-               <a href="/skills">skills</a>
-            </li>
-            <li class="breadcrumb-item">
-               bootstrap
-            </li>
-         </ol>
-      </section>
-
-      {{!-- Nav - це компонент, який створює навігаційне меню --}}
-      {{!-- nav клас для контейнера --}}
-      {{!-- nav-item клас для елемента --}}
-      {{!-- nav-link клас для посилання всередині елемента --}}
-      {{!-- active клас для активного посилання --}}
-      {{!-- disabled клас для неактивного посилання --}}
-      <section class="col-12">
-         <div class="card">
-            <div class="nav">
-               <div class="nav-item">
-                  <a href="#" class="nav-link">Посилання</a>
+               <div class="form-check form-switch">
+                  <label class="form-check-label">Apple</label>
+                  <input name="food" type="checkbox" class="form-check-input">
                </div>
-               <div class="nav-item">
-                  <a href="#" class="nav-link">Каталог</a>
+
+               <div class="form-check form-switch">
+                  <label class="form-check-label">Orange</label>
+                  <input name="food" type="checkbox" class="form-check-input">
                </div>
-               <div class="nav-item">
-                  <a href="#" class="nav-link disabled">Підтримка</a>
+
+               <div class="form-check form-switch">
+                  <label class="form-check-label">Banana</label>
+                  <input name="food" type="checkbox" class="form-check-input">
                </div>
             </div>
-         </div>
-      </section>
+         
 
-      {{!-- flex-column клас для контейнера, щоб вивести елементи вертикально --}}
-      <section class="col-4">
-         <div class="card">
-            <div class="card-body">
-               <div class="nav flex-column">
-                  <div class="nav-item">
-                     <div class="card">
-                        <a href="#" class="nav-link">Посилання</a>
+      {{!-- Radio field - це компонент, який дозволяє створити список опцій, в якому можна обрати лише одну опцію --}}
+      {{!-- form-check клас для контейнера поля-перемикача --}}
+      {{!-- form-check-input клас для <input>, який має type="radio" --}}
+      {{!-- form-check-label клас для <label> --}}
+
+         
+            <div class="card col-3 p-4 m-3">
+               <h5 class="form-label">Radio field</h5>
+
+               <div class="form-check">
+                  <label class="form-check-label">Apple</label>
+                  <input name="food" type="radio" class="form-check-input">
+               </div>
+
+               <div class="form-check">
+                  <label class="form-check-label">Orange</label>
+                  <input name="food" type="radio" class="form-check-input">
+               </div>
+
+               <div class="form-check">
+                  <label class="form-check-label">Banana</label>
+                  <input name="food" type="radio" class="form-check-input">
+               </div>
+            </div>
+         
+
+      {{!-- Check field - це компонент, який дозволяє створити список опцій, в якому можна обрати будь-яку кількість опцій --}}
+      {{!-- form-check клас для контейнера поля-прапорця --}}
+      {{!-- form-check-input клас для <input>, який має type="checkbox" --}}
+      {{!-- form-check-label клас для <label> --}}
+
+         
+            <div class="card col-3 p-4 m-3">
+               <h5 class="form-label">Check field</h5>
+               <div class="form-check">
+                  <label class="form-check-label">Apple</label>
+                  <input type="checkbox" class="form-check-input">
+               </div>
+               <div class="form-check">
+                  <label class="form-check-label">Orange</label>
+                  <input type="checkbox" class="form-check-input">
+               </div>
+               <div class="form-check">
+                  <label class="form-check-label">Banana</label>
+                  <input type="checkbox" class="form-check-input">
+               </div>
+            </div>
+         
+
+      {{!-- Select field - це компонент, який створює розкривний список --}}
+      {{!-- form-select клас для <select>, який контролює поле --}}
+         {{!-- form-select-lg задає великий розмір для <select> --}}
+            {{!-- form-select-sm задає маленький розмір для <select> --}}
+
+               <section>
+                  <div class="row mb-4">
+                     <label class="form-label">
+                        <h5>Select rol</h5>
+                     </label>
+                     <select class="form-select form-select-lg">
+                        <option selected>Open list</option>
+                        <option value="1">Admin</option>
+                        <option value="2">User</option>
+                     </select>
+                     <div class="form-text text-danger mb-4">Error. You need to set correct amail</div>
+                     <label class="form-label">
+                        <h5>Select rol</h5>
+                     </label>
+                     <select class="form-select form-select-sm">
+                        <option selected>Open list</option>
+                        <option value="1">Admin</option>
+                        <option value="2">User</option>
+                     </select>
+                     <div class="form-text text-danger">Error. You need to set correct amail</div>
+                  </div>
+               </section>
+
+               {{!-- Компоненти форми --}}
+               {{!-- form-label клас для <label> --}}
+                  {{!-- form-control клас для <input>, який контролює поле --}}
+                  {{!-- form-text клас для тексту-підказки --}}
+
+                  {{!-- Text field size --}}
+                  {{!-- form-control-lg задає великий розмір для <input> --}}
+                  {{!-- form-control-sm задає маленький розмір для <input> --}}
+
+                  <section class="card p-4 mb-5">
+                     <div>
+                        <div class="mb-4">
+                           <label class="form-label">Email address</label>
+                           <input class="form-control form-control-sm">
+                           <div class="form-text text-danger">Error. You need to set correct amail</div>
+                        </div>
+
+                        <div class="mb-4">
+                           <label class="form-label">Email address</label>
+                           <input disabled class="form-control form-control-lg"> {{!-- disabled --}}
+                           <div class="form-text text-danger">Error. You need to set correct amail</div>
+                        </div>
                      </div>
-                     <br>
-                  </div>
-                  <div class="nav-item">
-                     <div class="card">
-                        <a href="#" class="nav-link disabled">disabled</a>
+
+                     <div class="row mb-4">
+                        <label class="form-label">Select rol</label>
+                        <select class="form-select">
+                           <option selected>Open list</option>
+                           <option value="1">Admin</option>
+                           <option value="2">User</option>
+                        </select>
                      </div>
-                     <br>
-                  </div>
-                  <div class="nav-item">
-                     <div class="card">
-                        <a href="#" class="nav-link">Посилання</a>
+
+                  </section>
+
+
+                  {{!-- Зовнішні відступи --}}
+                  {{!-- m-* визначає зовнішні відступи для всіх сторін --}}
+                  {{!-- mt-* визначає зовнішні відступи для верхньої сторони --}}
+                  {{!-- mb-* визначає зовнішні відступи для нижньої сторони --}}
+                  {{!-- my-* визначає вертикальні зовнішні відступи --}}
+                  {{!-- ms-* визначає зовнішні відступи для лівої сторони --}}
+                  {{!-- me-* визначає зовнішні відступи для правої сторони --}}
+                  {{!-- mx-* визначає горизонтальні зовнішні відступи --}}
+                  {{!-- замініть * на число від 1 до 5, щоб визначити --}}
+                  {{!-- на скільки великими мають бути відступи --}}
+
+                  <section class=" card col-5 mb-4">
+                     <div class="card text-bg-primary m-3">
+                        <div class="card-body">Карточка 1</div>
                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+                     <div class="col-4 card text-bg-secondary mx-5">
+                        <div class="card-body">Карточка 2</div>
+                     </div>
+                     <div class="col-4 card text-bg-warning my-4">
+                        <div class="card-body">Карточка 3</div>
+                     </div>
+                     <div class="col-4 card text-bg-dark mb-3">
+                        <div class="card-body">Карточка 4</div>
+                     </div>
+                  </section>
 
-      {{!-- nav-tabs клас для контейнера, щоб вивести меню навігації в форматі вкладок --}}
-      <section class="col-12">
-         <div class="nav nav-tabs">
-            <div class="nav-item">
-               <a href="#" class="nav-link">Посилання</a>
-            </div>
-            <div class="nav-item">
-               <a href="#" class="nav-link disabled">disabled</a>
-            </div>
-            <div class="nav-item">
-               <a href="#" class="nav-link">Посилання</a>
-            </div>
-         </div>
-      </section>
+                  {{!-- Внутрішні відступи --}}
+                  {{!-- p-* визначає внутрішні відступи для всіх сторін --}}
+                  {{!-- pt-* визначає внутрішні відступи для верхньої сторони --}}
+                  {{!-- pb-* визначає внутрішні відступи для нижньої сторони --}}
+                  {{!-- py-* визначає вертикальні внутрішні відступи --}}
+                  {{!-- ps-* визначає внутрішні відступи для лівої сторони --}}
+                  {{!-- pe-* визначає внутрішні відступи для правої сторони --}}
+                  {{!-- px-* визначає горизонтальні внутрішні відступи --}}
+                  {{!-- замініть * на число від 1 до 5, щоб визначити --}}
+                  {{!-- на скільки великими мають бути відступи --}}
 
-      <section class="col-12">
-         {{!-- Card - це компонент, який створює карточку сутності --}}
-         <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
-            <div class="card-body">
-               <h5 class="card-title">Карточка товару</h5>
-               <p>Опис товару, технічні характеристики, тощо...</p>
-               <a href="/web" class="btn btn-primary">Кнопка</a>
-            </div>
-         </div>
-      </section>
+                  <section class="card ms-3 mb-4 col-6">
+                     <div class="col-5 card text-bg-primary p-4 m-3">
+                        <div class="card-body">Карточка</div>
+                     </div>
+                     <div class="col-5 card text-bg-secondary pt-5 m-3">
+                        <div class="card-body">Карточка</div>
+                     </div>
+                     <div class="col-5 card text-bg-warning py-4 m-3">
+                        <div class="card-body">Карточка</div>
+                     </div>
+                     <div class="col-5 card text-bg-dark px-3 m-3">
+                        <div class="card-body">Карточка</div>
+                     </div>
+                  </section>
 
-      <section class="col-4">
-         {{!-- List - це компонент, який створює список --}}
-         {{!-- Card Header та Card Footer --}}
-         <div class="card">
-            <div class="card-header text-bg-primary">
-               <div class="display-6">Menu</div>
-            </div>
-            <ul class="list-group list-group-flush">
-               <li class="list-group-item"><a href="/" class="btn btn-link">Home</a></li>
-               <li class="list-group-item"><a href="/task21" class="btn btn-link">task21</a></li>
-               <li class="list-group-item"><a href="/task22" class="btn btn-link">task22</a></li>
-            </ul>
-            <div class="card-footer">
-               <button class="btn btn-outline-secondary btn-sm">Update list</button>
-            </div>
-         </div>
-      </section>
+                  {{!-- Alert - це компонент, який відображає повідомлення --}}
+                  {{!-- alert визначає контейнер для компонента --}}
+                  {{!-- alert-primary визначає основний колір --}}
+                  {{!-- alert-secondary визначає додатковий колір --}}
+                  {{!-- alert-success визначає зелений (успішний) колір --}}
+                  {{!-- alert-danger визначає червоний (небезпечний) колір --}}
+                  {{!-- alert-warning визначає жовтий (попереджувальний) колір --}}
+                  {{!-- alert-info визначає блакитний (інформаційний) колір --}}
+                  {{!-- alert-light визначає світлий колір --}}
+                  {{!-- alert-dark визначає темний колір --}}
 
-      <section class="col-8">
-         {{!-- Tables - це компонент, який створює таблиці --}}
-         <table class="table table-striped table-bordered text-bg-success">
-            <thead>
-               <tr>
-                  <th>
-                     #id
-                  </th>
-                  <th>
-                     name
-                  </th>
-                  <th>
-                     age
-                  </th>
-               </tr>
-            </thead>
+                  <section class="col-6">
+                     <div class="alert alert-primary">Це дуже важлива інформація!</div>
+                     <div class="alert alert-light">Це дуже важлива інформація!</div>
+                     <div class="alert alert-success">Це дуже важлива інформація!</div>
+                  </section>
 
-            <tbody>
-               <tr>
-                  <th>
-                     1
-                  </th>
-                  <td>
-                     Jhon
-                  </td>
-                  <td>
-                     34
-                  </td>
-               </tr>
-               <tr>
-                  <th>
-                     3
-                  </th>
-                  <td>
-                     Ivan
-                  </td>
-                  <td>
-                     35
-                  </td>
-               </tr>
-               <tr>
-                  <th>
-                     4
-                  </th>
-                  <td>
-                     Ivan
-                  </td>
-                  <td>
-                     35
-                  </td>
-               </tr>
-               <tr>
-                  <th>
-                     5
-                  </th>
-                  <td>
-                     Ivan
-                  </td>
-                  <td>
-                     35
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </section>
+                  {{!-- Badge - це компонент, який вказує значок з контентом --}}
+                  {{!-- badge клас для контейнера --}}
+                  {{!-- rounded-pill робить заокруглення країв компонента --}}
 
-      <section class="col-6">
-         {{!-- Background color - це додатковий class name, який дає можливість зафарбувати фон компонента. --}}
-         {{!-- text-bg-primary визначає основний колір --}}
-         {{!-- text-bg-secondary визначає додатковий колір --}}
-         {{!-- text-bg-success визначає зелений (успішний) колір --}}
-         {{!-- text-bg-danger визначає червоний (небезпечний) колір --}}
-         {{!-- text-bg-warning визначає жовтий (попереджувальний) колір --}}
-         {{!-- text-bg-info визначає блакитний (інформаційний) колір --}}
-         {{!-- text-bg-light визначає світлий колір --}}
-         {{!-- text-bg-dark визначає темний колір --}}
+                  <section class="col-8">
+                     <div class="row">
+                        <div class="col-12">
+                           <ol class="breadcrumb">
+                              <li class="breadcrumb-item">
+                                 <a href="/">Home</a>
+                              </li>
+                              <li class="breadcrumb-item">
+                                 <a href="/skills">skills</a>
+                              </li>
+                              <li class="breadcrumb-item">
+                                 bootstrap
+                              </li>
+                           </ol>
+                        </div>
 
-         <div class="card text-bg-secondary">
-            <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
-            <div class="card-body">
-               <h5 class="card-title">Карточка товару</h5>
-               <p>Опис товару, технічні характеристики, тощо...</p>
-               <a href="/web" class="btn btn-primary">Кнопка</a>
-            </div>
-         </div>
-      </section>
+                        <div class="col-12">
+                           <h6>Hellow World! <span class="badge text-bg-warning">NEW</span> </h6>
+                           <h6>Hellow World! <span class="badge rounded-pill text-bg-warning text-uppercase">Топ
+                                 продаж</span>
+                           </h6>
+                           <button class="btn btn-primary rounded-pill">Click</button>
+                        </div>
 
-      <section class="col-12">
-         <div class="card text-bg-success">
-            <div class="card-header text-center">Header</div>
-            <div class="card-body">
-               <h6 class="card-title">Title</h6>
-               <p>Будь який контент в нашому боксі.. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-                  dolor
-                  aliquid et sequi corrupti, laboriosam magnam optio unde, provident nostrum, accusamus beatae delectus
-                  eveniet totam aperiam nisi sint voluptatum doloremque!</p>
-               <button class="btn btn-light">Click</button>
-               <div class="card-footer text-center">Footer</div>
-            </div>
-         </div>
-      </section>
+                     </div>
+                  </section>
 
-      <section class="col-12">
-         {{!-- Сітка - це підхід до верстки інтерфейсів, в якому ми розділяємо наш контент на 12 колонок --}}
-         {{!-- row визначає рядок стовпців у сітковій системі --}}
-         {{!-- сol-* визначає ширину стовпців у системі сітки --}}
-         {{!-- (замініть * на число від 1 до 12, щоб визначити скільки стовпців має охоплювати ваш елемент) --}}
-         {{!-- g-* визначає вертикальний та горизонтальний розрив
-         замініть * на число від 1 до 5, щоб визначити на скільки великими мають бути відступи --}}
+                  {{!-- Breadcrumb (“хлібні крихти”) - це навігаційний компонент,
+                  який відображає ієрархію сторінок на сайті та дозволяє
+                  користувачеві легко повернутись до попередніх сторінок. --}}
 
-         {{!-- gy-* визначає вертикальний розрив --}}
+                  {{!-- breadcrumb клас для контейнера --}}
+                  {{!-- breadcrumb-item клас для елемента --}}
 
-         {{!-- gx-* визначає горизонтальний розрив --}}
+                  <section class="col-8">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                           <a href="/">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                           <a href="/skills">skills</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                           bootstrap
+                        </li>
+                     </ol>
+                  </section>
 
-         <div class="row gy-3 gx-2">
+                  {{!-- Nav - це компонент, який створює навігаційне меню --}}
+                  {{!-- nav клас для контейнера --}}
+                  {{!-- nav-item клас для елемента --}}
+                  {{!-- nav-link клас для посилання всередині елемента --}}
+                  {{!-- active клас для активного посилання --}}
+                  {{!-- disabled клас для неактивного посилання --}}
+                  <section class="col-12">
+                     <div class="card">
+                        <div class="nav">
+                           <div class="nav-item">
+                              <a href="#" class="nav-link">Посилання</a>
+                           </div>
+                           <div class="nav-item">
+                              <a href="#" class="nav-link">Каталог</a>
+                           </div>
+                           <div class="nav-item">
+                              <a href="#" class="nav-link disabled">Підтримка</a>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
 
-            <div class="col-4">
-               <div class="card text-bg-primary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                  {{!-- flex-column клас для контейнера, щоб вивести елементи вертикально --}}
+                  <section class="col-4">
+                     <div class="card">
+                        <div class="card-body">
+                           <div class="nav flex-column">
+                              <div class="nav-item">
+                                 <div class="card">
+                                    <a href="#" class="nav-link">Посилання</a>
+                                 </div>
+                                 <br>
+                              </div>
+                              <div class="nav-item">
+                                 <div class="card">
+                                    <a href="#" class="nav-link disabled">disabled</a>
+                                 </div>
+                                 <br>
+                              </div>
+                              <div class="nav-item">
+                                 <div class="card">
+                                    <a href="#" class="nav-link">Посилання</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
 
-            <div class="col-4">
-               <div class="card text-bg-secondary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                  {{!-- nav-tabs клас для контейнера, щоб вивести меню навігації в форматі вкладок --}}
+                  <section class="col-12">
+                     <div class="nav nav-tabs">
+                        <div class="nav-item">
+                           <a href="#" class="nav-link">Посилання</a>
+                        </div>
+                        <div class="nav-item">
+                           <a href="#" class="nav-link disabled">disabled</a>
+                        </div>
+                        <div class="nav-item">
+                           <a href="#" class="nav-link">Посилання</a>
+                        </div>
+                     </div>
+                  </section>
 
-            <div class="col-4">
-               <div class="card text-bg-secondary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                  <section class="col-12">
+                     {{!-- Card - це компонент, який створює карточку сутності --}}
+                     <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
+                        <div class="card-body">
+                           <h5 class="card-title">Карточка товару</h5>
+                           <p>Опис товару, технічні характеристики, тощо...</p>
+                           <a href="/web" class="btn btn-primary">Кнопка</a>
+                        </div>
+                     </div>
+                  </section>
 
-            <div class="col-4">
-               <div class="card text-bg-secondary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                  <section class="col-4">
+                     {{!-- List - це компонент, який створює список --}}
+                     {{!-- Card Header та Card Footer --}}
+                     <div class="card">
+                        <div class="card-header text-bg-primary">
+                           <div class="display-6">Menu</div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item"><a href="/" class="btn btn-link">Home</a></li>
+                           <li class="list-group-item"><a href="/task21" class="btn btn-link">task21</a></li>
+                           <li class="list-group-item"><a href="/task22" class="btn btn-link">task22</a></li>
+                        </ul>
+                        <div class="card-footer">
+                           <button class="btn btn-outline-secondary btn-sm">Update list</button>
+                        </div>
+                     </div>
+                  </section>
 
-            <div class="col-4">
-               <div class="card text-bg-secondary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                  <section class="col-8">
+                     {{!-- Tables - це компонент, який створює таблиці --}}
+                     <table class="table table-striped table-bordered text-bg-success">
+                        <thead>
+                           <tr>
+                              <th>
+                                 #id
+                              </th>
+                              <th>
+                                 name
+                              </th>
+                              <th>
+                                 age
+                              </th>
+                           </tr>
+                        </thead>
 
-            <div class="col-4">
-               <div class="card text-bg-secondary">
-                  <div class="card-header text-center">Header</div>
-                  <div class="card-body">
-                     <h6 class="card-title">Title</h6>
-                     <p>Будь який контент в нашому боксі..</p>
-                     <button class="btn btn-light">Click</button>
-                     <div class="card-footer text-center">Footer</div>
-                  </div>
-               </div>
-            </div>
+                        <tbody>
+                           <tr>
+                              <th>
+                                 1
+                              </th>
+                              <td>
+                                 Jhon
+                              </td>
+                              <td>
+                                 34
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>
+                                 3
+                              </th>
+                              <td>
+                                 Ivan
+                              </td>
+                              <td>
+                                 35
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>
+                                 4
+                              </th>
+                              <td>
+                                 Ivan
+                              </td>
+                              <td>
+                                 35
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>
+                                 5
+                              </th>
+                              <td>
+                                 Ivan
+                              </td>
+                              <td>
+                                 35
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </section>
 
-         </div>
-      </section>
+                  <section class="col-6">
+                     {{!-- Background color - це додатковий class name, який дає можливість зафарбувати фон компонента.
+                     --}}
+                     {{!-- text-bg-primary визначає основний колір --}}
+                     {{!-- text-bg-secondary визначає додатковий колір --}}
+                     {{!-- text-bg-success визначає зелений (успішний) колір --}}
+                     {{!-- text-bg-danger визначає червоний (небезпечний) колір --}}
+                     {{!-- text-bg-warning визначає жовтий (попереджувальний) колір --}}
+                     {{!-- text-bg-info визначає блакитний (інформаційний) колір --}}
+                     {{!-- text-bg-light визначає світлий колір --}}
+                     {{!-- text-bg-dark визначає темний колір --}}
 
+                     <div class="card text-bg-secondary">
+                        <img class="card-img-top" src="https://picsum.photos/600/300" alt="product photo">
+                        <div class="card-body">
+                           <h5 class="card-title">Карточка товару</h5>
+                           <p>Опис товару, технічні характеристики, тощо...</p>
+                           <a href="/web" class="btn btn-primary">Кнопка</a>
+                        </div>
+                     </div>
+                  </section>
+
+                  <section class="col-12">
+                     <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body">
+                           <h6 class="card-title">Title</h6>
+                           <p>Будь який контент в нашому боксі.. Lorem ipsum dolor, sit amet consectetur adipisicing
+                              elit.
+                              Quod
+                              dolor
+                              aliquid et sequi corrupti, laboriosam magnam optio unde, provident nostrum, accusamus
+                              beatae
+                              delectus
+                              eveniet totam aperiam nisi sint voluptatum doloremque!</p>
+                           <button class="btn btn-light">Click</button>
+                           <div class="card-footer text-center">Footer</div>
+                        </div>
+                     </div>
+                  </section>
+
+                  <section class="col-12">
+                     {{!-- Сітка - це підхід до верстки інтерфейсів, в якому ми розділяємо наш контент на 12 колонок
+                     --}}
+                     {{!-- row визначає рядок стовпців у сітковій системі --}}
+                     {{!-- сol-* визначає ширину стовпців у системі сітки --}}
+                     {{!-- (замініть * на число від 1 до 12, щоб визначити скільки стовпців має охоплювати ваш елемент)
+                     --}}
+                     {{!-- g-* визначає вертикальний та горизонтальний розрив
+                     замініть * на число від 1 до 5, щоб визначити на скільки великими мають бути відступи --}}
+
+                     {{!-- gy-* визначає вертикальний розрив --}}
+
+                     {{!-- gx-* визначає горизонтальний розрив --}}
+
+                     <div class="row gy-3 gx-2">
+
+                        <div class="col-4">
+                           <div class="card text-bg-primary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-4">
+                           <div class="card text-bg-secondary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-4">
+                           <div class="card text-bg-secondary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-4">
+                           <div class="card text-bg-secondary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-4">
+                           <div class="card text-bg-secondary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-4">
+                           <div class="card text-bg-secondary">
+                              <div class="card-header text-center">Header</div>
+                              <div class="card-body">
+                                 <h6 class="card-title">Title</h6>
+                                 <p>Будь який контент в нашому боксі..</p>
+                                 <button class="btn btn-light">Click</button>
+                                 <div class="card-footer text-center">Footer</div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </section>
    </div>
 </main>
