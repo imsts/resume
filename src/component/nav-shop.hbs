@@ -1,0 +1,18 @@
+<nav class="navigation">
+    <div class="card p-3">
+        {{#with navigation}}
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav">
+                    {{#each links}}
+                    <li class="nav-item">
+                        <a class="nav-link {{#unless href}} disabled
+                              {{/unless}}" href="{{this.href}}" target="_blank">{{this.text}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+</nav>
