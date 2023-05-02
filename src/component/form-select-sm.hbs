@@ -1,7 +1,7 @@
 {{#with data}}
 <form>
    <label class="form-label">{{label}}</label>
-   <select class="form-select">
+   <select class="form-select form-select-sm">
       <option selected disabled>{{placeholder}}</option>
       {{#each options}}
       <option>{{value}}. {{text}}</option>
@@ -9,4 +9,3 @@
    </select>
 </form>
 {{/with}}
-
