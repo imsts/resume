@@ -1,0 +1,232 @@
+<main class="main">
+
+   <div>
+      {{> nav-shop }}
+   </div>
+
+   <section>
+      <div>
+         <h2>{{header}}</h2>
+
+         {{!-- Виведення даних з об'єкта 'tabs' --}}
+         <div class="tabs row mb-5">
+            {{#with purchase}}
+            <div class="">
+               <ul class="nav nav-tabs pt-3 fs-5">
+                  {{#each tabs}}
+                  <div class="nav-item">
+                     <a class="nav-link {{#if @first}} active fw-medium {{/if}}" href="#">{{this}}</a>
+                  </div>
+                  {{/each}}
+               </ul>
+            </div>
+         </div>
+
+         {{!-- Виведення даних з об'єкта 'actionBlock' --}}
+         <div class="row gx-3 mb-5">
+            <div class="col-3">
+               {{#with actionBlock}}
+               <input type="text" class="form-control" placeholder="{{input.placeholder}}">
+            </div>
+            <div class="col-9">
+               {{#each buttons}}
+               <a class="btn {{#if isSuccess}} btn-success {{/if}} {{#if isOutline}} btn-outline-success {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}"
+                  href="{{link}}" type="button">{{text}}</a>
+               {{/each}}
+            </div>
+         </div>
+         {{/with}}
+         <div>
+            <hr>
+         </div>
+
+         {{!-- Виведення даних з об'єкта 'itemList' --}}
+         <div class="mt-3">
+            {{#each itemList}}
+            {{> purchaseItem}}
+            <hr>
+            {{/each}}
+         </div>
+         {{/with}}
+         <br>
+         <hr>
+      </div>
+   </section>
+
+   {{!-- Виведення даних з об'єкта 'userInfo' --}}
+   <section class="mb-4">
+      <div>
+         {{#with userInfo}}
+
+         <h3 class="mb-5">{{title}}</h3>
+
+         <div class="card mb-3">
+            <div class="card-body">
+
+               {{#with profileData}}
+
+               <h4 class="mb-3">{{title}}</h4>
+
+               {{!-- Виведення даних з об'єкта 'fullName' --}}
+               <div class="card one mb-3">
+                  <div class="card-body">
+                     {{#with fullName}}
+                     <div class="row">
+
+                        {{#with surname}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                        {{#with name}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                        {{#with middleName}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                     </div>
+                     {{/with}}
+                  </div>
+               </div>
+
+               {{!-- Виведення даних з об'єкта 'otherInfo' --}}
+               <div class="card mb-3">
+                  <div class="card-body">
+
+                     {{#with otherInfo}}
+
+                     <div class="row">
+                        {{#with birthday}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                        {{#with sex}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                        {{#with language}}
+                        <div class="col">
+                           <span>{{title}}</span>
+                           <br>
+                           <span class="fw-medium">{{value}}</span>
+                        </div>
+                        {{/with}}
+
+                     </div>
+                     {{/with}}
+                  </div>
+               </div>
+               {{/with}}
+
+               {{!-- Виведення даних з об'єкта 'buttons' --}}
+               <div class="card">
+                  <div class="card-body">
+                     <div class="row">
+
+                        {{#each buttons}}
+                        <div class="col">
+                           <a class="btn {{#if isPrimary}} btn-primary {{/if}} {{#if isSecondary}} btn-outline-secondary {{/if}} 
+                                 {{#if isDanger}} btn-outline-danger {{/if}}" href="{{link}}"
+                              type="button">{{text}}</a>
+                        </div>
+                        {{/each}}
+
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         {{!-- Виведення даних з об'єкта 'recipients' --}}
+         <div class="mb-3">
+            {{#with recipients}}
+            <div class="card">
+               <div class="card-body">
+
+                  <h4 class="mb-4">{{title}}</h4>
+
+                  {{!-- Виведення даних з об'єкта 'users' --}}
+                  <div class="row">
+                     {{#each users}}
+                     <div class="col-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <span class="fw-medium">{{name}}</span>
+                              <br>
+                              <span>{{phone}}</span>
+                              <br>
+                              <a class="btn btn-primary mt-3" href="{{button.link}}" type="button">{{button.text}}</a>
+                           </div>
+                        </div>
+                     </div>
+                     {{/each}}
+                  </div>
+
+               </div>
+            </div>
+            {{/with}}
+         </div>
+
+         {{!-- Виведення даних з об'єкта 'contacts' --}}
+         <div class="">
+            {{#with contacts}}
+            <div class="card">
+               <div class="card-body">
+
+                  <h4 class="pt-4 mb-4">{{title}}</h4>
+
+                  {{!-- Виведення даних з об'єкта 'contactData' --}}
+                  <div class="row">
+                     {{#each contactData}}
+                     <div class="col-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <span>{{title}}</span>
+                              <br>
+                              <span class="fw-medium">{{value}}</span>
+                              <br>
+                              {{#with button}}
+                              <a class="btn mt-3 {{#if isPrimary}} btn-primary {{/if}} {{#if isSecondary}} btn-outline-secondary 
+                                    {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}" href="{{link}}"
+                                 type="button">{{text}}</a>
+                              {{/with}}
+                           </div>
+                        </div>
+                     </div>
+                     {{/each}}
+                  </div>
+
+               </div>
+            </div>
+            {{/with}}
+         </div>
+         {{/with}}
+      </div>
+   </section>
+   <hr>
+</main>
+
+{{!-- Виведення даних з об'єкта 'footer' --}}
+{{> footer-order}}
