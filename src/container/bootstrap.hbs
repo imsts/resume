@@ -1,14 +1,29 @@
 <main class="p-5">
    <div class="row">
 
+
+      {{!-- style.css --}}
+      <section class="row">
+         <h1>Hello World!</h1>
+      
+
+      <div>
+         {{> title data="My Title"}}
+      </div>
+      <br>
+      <br>
+      <div class="card col-3 p-3" style="color: #4f00a9;">This is text style</div>
+      </section>
+
+
       {{!-- Font Awesome - це технології, яка надає бібліотеку іконок різного типу, формату, з анімацією та стилізацією. --}}
 
-      <section>
+      <section class="row">
          <div class="m-3">
             <img src="/svg/rocket-takeoff.svg" alt="">
          </div>
 
-         <div class="card p-3">
+         <div class="card col-2 p-3">
             <h1>
                <i class="fa-solid fa-dragon fa-beat m-3" style="color: #ff1900;"></i>
             </h1>
