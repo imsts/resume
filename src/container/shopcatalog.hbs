@@ -1,0 +1,126 @@
+<main>
+    {{!-- Виведення даних з об'єкта 'navigation' --}}
+    <div>
+        {{> nav-shop }}
+    </div>
+    <br>
+
+    {{!-- Виведення даних з об'єкта 'breadcrumb' --}}
+    <div>
+        {{> breadcrumb }}
+    </div>
+
+    {{!-- Виведення даних з об'єкта 'sort-block' --}}
+    <section class="mb-4">
+        <div class="container">
+            <h1>{{header}}</h1>
+            <br>
+            <div class="row">
+                {{#each sortBlock}}
+                <div class="col-3">
+                    {{> select-form }}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    {{!-- Виведення даних з об'єкта 'filterBlock' --}}
+    <section>
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-4">
+                    {{#with filterBlock}}
+                    <div class="card">
+                        <div class="card-body">
+                            {{#with sellers}}
+                            <p class="mb-2">{{title}}</p>
+                            <div class="mb-2">
+                                {{#each list}}
+                                <div class="mb-2">
+                                    <input name="quiz" type="checkbox" class="form-check-input">
+                                    <label class="form-check-label">{{value}}</label>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/with}}
+
+                            <hr>
+
+                            {{#with brands}}
+                            <p class="mb-2">{{title}}</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="{{input.placeholder}}">
+                            </div>
+                            <div class="form-check">
+                                {{#each options}}
+                                <div class="mb-2">
+                                    <label class="form-check-label">{{value}}</label>
+                                    <input class="form-check-input" name="quiz" type="checkbox">
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/with}}
+
+                            <hr>
+
+                            {{#with price}}
+                            <p class="mb-2">{{title}}</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control mb-3" placeholder="{{range.from}}">
+                                <input type="text" class="form-control" placeholder="{{range.to}}">
+                            </div>
+                            <button class="btn btn-outline-secondary px-3 btn-sm">{{button.text}}</button>
+                            {{/with}}
+
+                            <hr>
+
+                            {{#each filterList}}
+                            <p class="mb-2">{{title}}</p>
+                            {{> form-check}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+
+                {{!-- Виведення даних з об'єкта 'goodsList' --}}
+                <div class="col-8">
+                    <div class="row g-3">
+                        {{#each goodsList}}
+                        <div class="col-6">
+                            {{> catalogItem }}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{!-- Виведення даних з об'єкта 'service' --}}
+    <section>
+        <div class="container">
+            {{#with service}}
+            <div class="row pt-5 mb-4">
+                <div class="col-12">
+                    <div class="card text-bg-success text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">{{title}}</h2>
+                            <p>{{description}}</p>
+                            {{#with buttons.[0]}}
+                            <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                            {{/with}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </section>
+</main>
+
+<hr>
+<div class="container">
+    {{> footer-order}}
+</div>
