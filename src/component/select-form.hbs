@@ -1,12 +1,10 @@
-{{#with data}}
 <form>
-   <label class="form-label">{{label}}</label>
-   <select class="form-select">
+   <label for="sel1" class="form-label">{{label}}</label>
+   <select class="form-select select-size">
       <option selected disabled>{{placeholder}}</option>
       {{#each options}}
       <option>{{value}}. {{text}}</option>
       {{/each}}
    </select>
 </form>
-{{/with}}
 
