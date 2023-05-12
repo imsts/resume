@@ -1,18 +1,23 @@
-<div>
-  {{#with main}}
-  <main>
+{{#with main}}
+<main class="main">
 
-    <div>
-      <h1>{{name}}</h1>
-      <p>Born on {{birthdate}} in {{birthplace}}</p>
-      <p>Died on {{deathdate}} in {{deathplace}}</p>
-      <p>Nationality: {{nationality}}</p>
-      <p>Occupation: {{occupation}}</p>
-      <p>Known for: {{#each known_for}}{{this}}{{#unless @last}},
-        {{/unless}}{{/each}}</p>
+  <div class="row">
+    <div class="card col-4 p-3 me-2 border-3">
+      <img src='https://img.mensxp.com/media/content/2015/Sep/albert-einstein4-1442571735.jpg' class='card-img-top'
+        alt='photo' />
+      <div class="card-body">
+        <h1 class="card-title display-5">{{name}}</h1>
+        <hr>
+        <p>Born on {{birthdate}} in {{birthplace}}</p>
+        <p>Died on {{deathdate}} in {{deathplace}}</p>
+        <p>Nationality: {{nationality}}</p>
+        <p>Occupation: {{occupation}}</p>
+        <p>Known for: {{#each known_for}}{{this}}{{#unless @last}},
+          {{/unless}}{{/each}}</p>
+      </div>
     </div>
-    <hr>
-    <section>
+
+    <div class="card col-7 p-3">
       <ul>
         {{#each education}}
         <li>{{degree}} in {{field}} from {{institution}} ({{year}})</li>
@@ -54,8 +59,9 @@
         {{/each}}
       </ul>
       <br>
+      <hr>
       <p>{{contributions.description}} ({{contributions.year}}) - {{contributions.field}}</p>
-    </section>
-  </main>
-  {{/with}}
-</div>
+    </div>
+  </div>
+</main>
+{{/with}}
