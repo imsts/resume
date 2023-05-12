@@ -1,23 +1,30 @@
-<div>
-  {{#with main}}
-  <main>
-    <section>
-      {{>title data='My educationss' big=true}}
+{{#with main}}
+<main class="card p-2">
+
+  <div class="row">
+    <section class="card-body col-6">
+      <div class="card-title mb-3">
+        {{>title data='My educationss' big=true}}
+      </div>
       <ul>
         {{#each educations}}
-        <li>{{name}} {{#if isEnd}} {{else}}
+        <li><i class="bi bi-arrow-down-right-circle"></i> {{name}} {{#if isEnd}} {{else}}
           (ще в процесі..) {{/if}}</li>
         {{/each}}
       </ul>
     </section>
-    <section>
-      {{>title data='My certificates'}}
+
+    <section class="card-body col-6">
+      <div class="card-title mb-3">
+        {{>title data='My certificates'}}
+      </div>
       <ul>
         {{#each certificates}}
-        <li>{{name}} ({{id}})</li>
+        <li><i class="bi bi-arrow-down-right-circle"></i> {{name}} ({{id}})</li>
         {{/each}}
       </ul>
     </section>
-  </main>
-  {{/with}}
-</div>
+  </div>
+
+</main>
+{{/with}}
